@@ -1,0 +1,53 @@
+Saya ingin kamu bertindak sebagai *pembuat form generator HTML interaktif*.  
+Tugasmu: menuliskan **file HTML** (single page) yang:
+
+1. Menggunakan **TailwindCSS CDN** untuk styling bergaya glassmorphism (latar gradien ungu–biru, kartu transparan “glass”).  
+2. Interaktif sepenuhnya dengan **JavaScript murni** di <script> bawaan halaman.  
+3. Semua elemen form berada dalam <div class="form-group"> untuk tiap pertanyaan.  
+4. Setiap perubahan input otomatis memutakhirkan sebuah `<textarea id="outputPrompt">` yang berisi **prompt siap pakai** (lihat format prompt di bawah).  
+5. Desain **responsif** (mobile‑first) & mencantumkan animasi lembut (transisi hover, fokus, dsb.).  
+6. Tetap sederhana—hanya HTML, Tailwind, dan JS; **tanpa library eksternal lain** kecuali Tailwind.  
+
+### Pertanyaan yang HARUS ada di form (urutkan seperti di sini)
+1. **Judul Acara** – input teks  
+2. **Penerima Sertifikat** – select: Peserta | Pemateri | Panitia  
+3. **Tanggal Acara** – input type date  
+4. **Tempat & Waktu Acara** – input teks (contoh placeholder: “Aula MI Ubudiyah, 09:00 WITA”)  
+5. **Nomor Sertifikat** – input teks  
+6. **Nama Penyelenggara Acara** – input teks  
+
+#### Data Penyelenggara untuk tanda tangan
+7. **Nama Penandatangan Penyelenggara** – input teks  
+8. **Jabatan Penandatangan Penyelenggara** – input teks  
+9. **Link Drive Tanda Tangan Penyelenggara** – input teks (URL)  
+
+#### Data Peserta & Penandatangan Utama
+10. **Nama Peserta** – input teks  
+11. **Nama Penandatangan Sertifikat** – input teks  
+12. **Jabatan Penandatangan** – input teks  
+13. **NIP/ID Penandatangan** – input teks  
+14. **Link Drive Tanda Tangan Penandatangan** – input teks (URL)  
+
+#### Opsi‐opsi tambahan
+15. **Tambahkan Nama Peserta & Penyelenggara di bawah tanda tangan?** – checkbox  
+16. **Teks Tambahan di Sertifikat** (opsional) – textarea  
+17. **Kutipan Penutup / Ucapan Terima Kasih** (opsional) – textarea  
+
+#### Pilihan gaya & tema
+18. **Tema Warna Sertifikat** – select:  
+   Dusty Rose | Sage Green | Champagne/Gold | Ivory/Off White | Blush Pink | Lavender/Lilac | Emerald Green | Navy Blue | Terracotta/Burnt Orange | Maroon/Wine Red | Peach/Coral | Black & White | Dusty Blue  
+19. **Gaya Sertifikat** – select:  
+   Minimalis Profesional | Klasik Formal | Floral Elegan | Earth Tone | Dark Elegant | Modern Flat  
+20. **Gaya Visual Website** – select:  
+   Formal Akademik | Cerah dan Ramah | Simple Clean | Berbasis Natur / Tanaman | Serius dan Resmi | Dinamis dan Segar  
+
+#### Elemen tambahan
+21. **Logo Penyelenggara** – checkbox + input link Google Drive (muncul hanya jika checkbox dicentang)  
+22. **Background Sertifikat Khusus (Gambar)** – checkbox + input link gambar (muncul hanya jika dicentang)  
+23. **Gunakan Warna Latar Sertifikat** – checkbox + input type color (muncul hanya jika dicentang)  
+
+### Tombol
+- **“🔧 Buat Prompt”** → mem‑build prompt manual (fungsi generatePrompt()).  
+- **“📋 Salin Prompt”** → menyalin isi `<textarea id="outputPrompt">` ke clipboard.  
+
+### Format *prompt* yang dihasilkan
