@@ -18,11 +18,17 @@ Sebuah aplikasi web praktis untuk membuat *prompt* HTML sertifikat digital secar
 ---
 
 🎯 **Fungsi & Manfaat**
+
 ✅ **Mempercepat pembuatan sertifikat digital** tanpa harus mendesain manual
+
 ✅ **Mengurangi ketergantungan pada software desain** seperti Photoshop atau Canva
+
 ✅ **Mendukung branding acara** dengan pemilihan tema warna dan visual yang sesuai
+
 ✅ **Praktis untuk digunakan siapa saja**, termasuk panitia acara, dosen, instruktur, atau pelaku UMKM
+
 ✅ **Cocok untuk berbagai kebutuhan**, seperti seminar, pelatihan, lomba, workshop, kelas daring, dll.
+
 ✅ **Output HTML mudah diintegrasikan** ke sistem otomatisasi atau aplikasi web
 
 ---
