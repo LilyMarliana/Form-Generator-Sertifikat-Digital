@@ -13,6 +13,7 @@
       min-height: 100vh;
       overflow-y: auto;
     }
+
     .glass {
       background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(12px);
@@ -27,75 +28,70 @@
     <div class="max-w-3xl w-full glass rounded-2xl shadow-2xl p-8 space-y-6 mt-10 text-white">
       <h1 class="text-3xl font-bold text-center text-white drop-shadow">Form Generator Sertifikat Digital</h1>
 
-      <!-- ===== FORM ===== -->
       <form id="certForm" class="space-y-4">
-        <!-- (semua field seperti sebelumnya) -->
-        <!-- Judul Acara -->
-        <div class="form-group">
-          <label class="block font-medium">Judul Acara</label>
-          <input type="text" name="judul" class="mt-1 w-full p-2 rounded bg-white/70 text-black" required />
-        </div>
-        <!-- Penerima -->
-        <div class="form-group">
-          <label class="block font-medium">Penerima Sertifikat</label>
-          <select name="penerima" class="mt-1 w-full p-2 rounded bg-white/70 text-black" required>
-            <option value="peserta">Peserta</option>
-            <option value="pemateri">Pemateri</option>
-            <option value="panitia">Panitia</option>
-          </select>
-        </div>
-        <!-- Tanggal -->
-        <div class="form-group">
-          <label class="block font-medium">Tanggal Acara</label>
-          <input type="date" name="tanggal" class="mt-1 w-full p-2 rounded bg-white/70 text-black" required />
-        </div>
-        <!-- Tempat & Waktu -->
-        <div class="form-group">
-          <label class="block font-medium">Tempat dan Waktu Acara</label>
-          <input type="text" name="tempat" placeholder="Contoh: Aula MI Ubudiyah, 09:00 WITA" class="mt-1 w-full p-2 rounded bg-white/70 text-black" />
-        </div>
-        <!-- Nomor -->
-        <div class="form-group">
-          <label class="block font-medium">Nomor Sertifikat</label>
-          <input type="text" name="nomor" class="mt-1 w-full p-2 rounded bg-white/70 text-black" />
-        </div>
-        <!-- Penyelenggara -->
-        <div class="form-group">
-          <label class="block font-medium">Nama Penyelenggara Acara</label>
-          <input type="text" name="penyelenggara" class="mt-1 w-full p-2 rounded bg-white/70 text-black" />
-        </div>
-        <!-- Nama Peserta -->
-        <div class="form-group">
-          <label class="block font-medium">Nama Peserta</label>
-          <input type="text" name="peserta" class="mt-1 w-full p-2 rounded bg-white/70 text-black" />
-        </div>
-        <!-- Penandatangan, Jabatan, NIP -->
+        <!-- Data Acara -->
+        <div class="form-group"><label class="block font-medium">Judul Acara</label><input type="text" name="judul" class="mt-1 w-full p-2 rounded bg-white/70 text-black" required /></div>
+        <div class="form-group"><label class="block font-medium">Penerima Sertifikat</label><select name="penerima" class="mt-1 w-full p-2 rounded bg-white/70 text-black" required><option value="peserta">Peserta</option><option value="pemateri">Pemateri</option><option value="panitia">Panitia</option></select></div>
+        <div class="form-group"><label class="block font-medium">Tanggal Acara</label><input type="date" name="tanggal" class="mt-1 w-full p-2 rounded bg-white/70 text-black" required /></div>
+        <div class="form-group"><label class="block font-medium">Tempat dan Waktu Acara</label><input type="text" name="tempat" placeholder="Contoh: Aula MI Ubudiyah, 09:00 WITA" class="mt-1 w-full p-2 rounded bg-white/70 text-black" /></div>
+        <div class="form-group"><label class="block font-medium">Nomor Sertifikat</label><input type="text" name="nomor" class="mt-1 w-full p-2 rounded bg-white/70 text-black" /></div>
+        <div class="form-group"><label class="block font-medium">Nama Penyelenggara Acara</label><input type="text" name="penyelenggara" class="mt-1 w-full p-2 rounded bg-white/70 text-black" /></div>
+        <div class="form-group"><label class="block font-medium">Nama Peserta</label><input type="text" name="peserta" class="mt-1 w-full p-2 rounded bg-white/70 text-black" /></div>
+
+        <!-- Penandatangan -->
         <div class="form-group"><label class="block font-medium">Nama Penandatangan Sertifikat</label><input type="text" name="penandatangan" class="mt-1 w-full p-2 rounded bg-white/70 text-black" /></div>
         <div class="form-group"><label class="block font-medium">Jabatan Penandatangan</label><input type="text" name="jabatan" class="mt-1 w-full p-2 rounded bg-white/70 text-black" /></div>
         <div class="form-group"><label class="block font-medium">NIP / ID Penandatangan</label><input type="text" name="nip" class="mt-1 w-full p-2 rounded bg-white/70 text-black" /></div>
-        <!-- TTD Link -->
         <div class="form-group"><label class="block font-medium">Link Drive Tanda Tangan Penandatangan</label><input type="text" name="ttdLink" class="mt-1 w-full p-2 rounded bg-white/70 text-black" /></div>
-        <!-- Checkbox tambah nama -->
+
+        <!-- Tambahan -->
         <div class="form-group"><label class="inline-flex items-center"><input type="checkbox" name="tambahNama" class="mr-2" /> Tambahkan Nama Peserta dan Penyelenggara di bawah tanda tangan?</label></div>
-        <!-- Teks tambahan -->
         <div class="form-group"><label class="block font-medium">Teks Tambahan di Sertifikat (Opsional)</label><textarea name="tambahan" class="mt-1 w-full p-2 rounded bg-white/70 text-black"></textarea></div>
-        <!-- Gaya Sertifikat -->
-        <div class="form-group"><label class="block font-medium">Gaya Sertifikat</label><select name="gaya" class="mt-1 w-full p-2 rounded bg-white/70 text-black"><option>Minimalis Profesional</option><option>Klasik Formal</option><option>Floral Elegan</option><option>Earth Tone</option><option>Dark Elegant</option><option>Modern Flat</option></select></div>
-        <!-- Gaya Visual -->
-        <div class="form-group"><label class="block font-medium">Gaya Visual Website</label><select name="visual" class="mt-1 w-full p-2 rounded bg-white/70 text-black"><option>Formal Akademik</option><option>Cerah dan Ramah</option><option>Simple Clean</option><option>Berbasis Natur / Tanaman</option><option>Serius dan Resmi</option><option>Dinamis dan Segar</option></select></div>
-        <!-- Elemen tambahan -->
-        <div class="form-group"><label class="block font-medium">Elemen Tambahan</label><label class="block"><input type="checkbox" name="logoCheck" class="mr-2" /> Logo Penyelenggara</label><input type="text" name="logoLink" placeholder="Link Google Drive logo (jika ada)" class="mt-1 w-full p-2 rounded bg-white/70 text-black" /><label class="block mt-2"><input type="checkbox" name="bgCheck" class="mr-2" /> Background Sertifikat Khusus (Gambar)</label><input type="text" name="bgLink" placeholder="Link Google Drive background (jika ada)" class="mt-1 w-full p-2 rounded bg-white/70 text-black" /><label class="block mt-2"><input type="checkbox" name="warnaCheck" class="mr-2" /> Gunakan Warna Latar Belakang Sertifikat</label><input type="color" name="warnaBg" class="mt-1 w-24 h-10 p-1 rounded" value="#ffffff" /></div>
-        <!-- Kutipan -->
         <div class="form-group"><label class="block font-medium">Kutipan Penutup / Ucapan Terima Kasih (Opsional)</label><textarea name="kutipan" class="mt-1 w-full p-2 rounded bg-white/70 text-black"></textarea></div>
+
+        <!-- Gaya -->
+        <div class="form-group"><label class="block font-medium">Gaya Sertifikat</label><select name="gaya" class="mt-1 w-full p-2 rounded bg-white/70 text-black"><option>Minimalis Profesional</option><option>Klasik Formal</option><option>Floral Elegan</option><option>Earth Tone</option><option>Dark Elegant</option><option>Modern Flat</option></select></div>
+
+        <!-- NEW: Tema Warna -->
+        <div class="form-group"><label class="block font-medium">Tema Warna Sertifikat</label><select name="temaWarna" class="mt-1 w-full p-2 rounded bg-white/70 text-black">
+          <option>Dusty Rose</option><option>Sage Green</option><option>Champagne / Gold</option><option>Ivory / Off White</option>
+          <option>Blush Pink</option><option>Lavender / Lilac</option><option>Emerald Green</option><option>Navy Blue</option>
+          <option>Terracotta / Burnt Orange</option><option>Maroon / Wine Red</option><option>Peach / Coral</option>
+          <option>Black & White</option><option>Dusty Blue</option></select></div>
+
+        <!-- NEW: Gaya Visual Website -->
+        <div class="form-group"><label class="block font-medium">Gaya Visual Website</label><select name="visual" class="mt-1 w-full p-2 rounded bg-white/70 text-black">
+          <option>Minimalis elegan</option><option>Rustic</option><option>Floral / Botanical</option><option>Modern glam</option>
+          <option>Classic / Traditional</option><option>Bohemian</option><option>Cute & Fun</option>
+          <option>Kultural / Adat</option><option>Dark mode / Moody</option><option>Monokrom hitam putih</option></select></div>
+
+        <!-- Elemen Tambahan -->
+        <div class="form-group">
+          <label class="block font-medium">Elemen Tambahan</label>
+          <label class="block"><input type="checkbox" name="logoCheck" class="mr-2" /> Logo Penyelenggara</label>
+          <input type="text" name="logoLink" placeholder="Link Google Drive logo (jika ada)" class="mt-1 w-full p-2 rounded bg-white/70 text-black" />
+          <label class="block mt-2"><input type="checkbox" name="bgCheck" class="mr-2" /> Background Sertifikat Khusus (Gambar)</label>
+          <input type="text" name="bgLink" placeholder="Link Google Drive background (jika ada)" class="mt-1 w-full p-2 rounded bg-white/70 text-black" />
+          <label class="block mt-2"><input type="checkbox" name="warnaCheck" class="mr-2" /> Gunakan Warna Latar Belakang Sertifikat</label>
+          <input type="color" name="warnaBg" class="mt-1 w-24 h-10 p-1 rounded" value="#ffffff" />
+        </div>
+
         <!-- Tombol -->
-        <div class="flex flex-wrap gap-2 pt-4"><button type="button" onclick="generatePrompt()" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded transition">🔧 Buat Prompt</button><button type="button" onclick="copyPrompt()" class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded transition">📋 Salin Prompt</button></div>
+        <div class="flex flex-wrap gap-2 pt-4">
+          <button type="button" onclick="generatePrompt()" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded transition">🔧 Buat Prompt</button>
+          <button type="button" onclick="copyPrompt()" class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded transition">📋 Salin Prompt</button>
+        </div>
       </form>
-      <!-- Output -->
-      <div class="form-group mt-6"><label class="block font-medium mb-2">Prompt Hasil:</label><textarea id="outputPrompt" class="w-full h-60 p-4 rounded bg-white/90 text-black font-mono"></textarea></div>
+
+      <!-- Output Prompt -->
+      <div class="form-group mt-6">
+        <label class="block font-medium mb-2">Prompt Hasil:</label>
+        <textarea id="outputPrompt" class="w-full h-60 p-4 rounded bg-white/90 text-black font-mono"></textarea>
+      </div>
     </div>
   </div>
 
-  <!-- ===== SCRIPT ===== -->
+  <!-- SCRIPT -->
   <script>
     function parseDriveLink(url) {
       const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
@@ -126,6 +122,7 @@ Website ini memiliki fitur:
 - Teks Tambahan: "${get("tambahan")}"
 - Kutipan Penutup: "${get("kutipan")}"
 - Gaya Sertifikat: ${get("gaya")}
+- Tema Warna Sertifikat: ${get("temaWarna")}
 ${yes("logoCheck") ? `- Logo Penyelenggara: ${parseDriveLink(get("logoLink"))}` : ""}
 ${yes("bgCheck") ? `- Background Sertifikat (Gambar): ${parseDriveLink(get("bgLink"))}` : ""}
 ${yes("warnaCheck") ? `- Background Sertifikat (Warna): ${get("warnaBg")}` : ""}
@@ -147,4 +144,5 @@ Fitur Tambahan: Sertifikat yang dihasilkan harus bisa diunduh dalam format PDF d
     }
   </script>
 </body>
+
 </html>
