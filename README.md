@@ -1,7 +1,4 @@
 # Form-Generator-Sertifikat-Digital
-Tentu Lily! Berikut versi lengkapnya yang sudah ditambahkan bagian **Fungsi & Manfaat** dan dirapikan supaya tetap menarik serta mudah dibaca:
-
----
 
 🎉 **Generator Sertifikat Digital**
 Sebuah aplikasi web praktis untuk membuat *prompt* HTML sertifikat digital secara cepat dan mudah. Dirancang agar pengguna bisa langsung menghasilkan template sertifikat berbasis data yang diinputkan, lengkap dengan pilihan gaya visual yang menarik.
