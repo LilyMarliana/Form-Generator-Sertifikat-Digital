@@ -31,10 +31,6 @@ Sebuah aplikasi web praktis untuk membuat *prompt* HTML sertifikat digital secar
 
 ✅ **Output HTML mudah diintegrasikan** ke sistem otomatisasi atau aplikasi web
 
----
-
-📸 **Cuplikan**
-Cuplikan Aplikasi
 
 ---
 
